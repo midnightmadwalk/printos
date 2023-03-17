@@ -1,8 +1,12 @@
 from flask import Flask
-import platform
-k=platform.platform()
+import subprocess
+
 app = Flask(__name__)
 
+args = ("./pocketbase", "serve")
+popen = subprocess.Popen(args, stdout=subprocess.PIPE)
+popen.wait()
+output = popen.stdout.read()
 @app.route('/')
 def hello_world():
-    return k
+    return output

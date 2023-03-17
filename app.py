@@ -3,7 +3,7 @@ import subprocess
 
 app = Flask(__name__)
 
-args = ("ls")
+args = ("pocketbase", "--help")
 popen = subprocess.Popen(args, stdout=subprocess.PIPE)
 popen.wait()
 output = popen.stdout.read()

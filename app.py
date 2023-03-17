@@ -1,7 +1,6 @@
 from flask import Flask
-import os
-import os
-k=os.name
+import platform
+k=platform.platform()
 app = Flask(__name__)
 
 @app.route('/')

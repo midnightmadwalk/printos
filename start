@@ -1,2 +1,3 @@
+chmod 777 ./pocketbase
 ./pocketbase --help
 gunicorn app:app
